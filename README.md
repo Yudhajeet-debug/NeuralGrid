@@ -2,8 +2,9 @@
 
 ![Build Status](https://img.shields.io/github/actions/workflow/status/Yudhajeet-debug/NeuralGrid/main.yml?branch=main&style=for-the-badge&logo=github&label=Build%20Status)
 ![Go Version](https://img.shields.io/github/go-mod/go-version/Yudhajeet-debug/NeuralGrid?style=for-the-badge&logo=go&logoColor=white&label=Go%20Engine)
-![Python Version](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python&logoColor=yellow)
+![Python Version](https://img.shields.io/badge/Python-3.14-blue?style=for-the-badge&logo=python&logoColor=yellow)
 ![License](https://img.shields.io/github/license/Yudhajeet-debug/NeuralGrid?style=for-the-badge&color=orange)
+![Node.js Version](https://img.shields.io/badge/Node.js-24.x-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
 > **"Power for All. Strength through Collaboration."** 🤝🦾
 
