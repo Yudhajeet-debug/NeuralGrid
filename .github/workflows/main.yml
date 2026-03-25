@@ -1,0 +1,40 @@
+name: NeuralGrid-Universal-Sentinel
+on: [push, pull_request]
+
+jobs:
+  # Block 1: The Go Engine
+  go-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with: {go-version: '1.26'}
+      - name: Verify Engine
+        run: go mod tidy && go build ./cmd/neuralgrid
+
+  # Block 2: The Python Scientist (AI/NPU)
+  python-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Lint Scripts
+        run: |
+          pip install flake8
+          # We only check the scripts folder
+          flake8 ./scripts --count --select=E9,F63,F7,F82 --show-source --statistics
+
+  # Block 3: The TSX Interface (UI)
+  ui-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '20'}
+      # We check the UI only if the folder isn't empty
+      - name: UI Skeleton Check
+        run: |
+          if [ -d "./ui" ]; then
+            echo "UI directory exists. Ready for TSX deployment."
+          fi

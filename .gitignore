@@ -1,0 +1,20 @@
+# Binaries and executables
+bin/
+*.exe
+*.dll
+
+# Go dependencies
+vendor/
+
+# Python environment
+__pycache__/
+.venv/
+*.pyc
+
+# UI dependencies
+node_modules/
+dist/
+
+# Local OS junk
+.DS_Store
+Thumbs.db
