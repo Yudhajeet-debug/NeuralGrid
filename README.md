@@ -1,7 +1,9 @@
 # 🛡️ NeuralGrid
-![Build Status](https://github.com/Yudhajeet-debug/NeuralGrid/actions/workflows/main.yml/badge.svg)
-![License](https://img.shields.io/github/license/Yudhajeet-debug/NeuralGrid?color=blue)
-![Languages](https://img.shields.io/github/languages/count/Yudhajeet-debug/NeuralGrid?color=green)
+
+![Build Status](https://img.shields.io/github/actions/workflow/status/Yudhajeet-debug/NeuralGrid/main.yml?branch=main&style=for-the-badge&logo=github&label=Build%20Status)
+![Go Version](https://img.shields.io/github/go-mod/go-version/Yudhajeet-debug/NeuralGrid?style=for-the-badge&logo=go&logoColor=white&label=Go%20Engine)
+![Python Version](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python&logoColor=yellow)
+![License](https://img.shields.io/github/license/Yudhajeet-debug/NeuralGrid?style=for-the-badge&color=orange)
 
 > **"Power for All. Strength through Collaboration."** 🤝🦾
 
