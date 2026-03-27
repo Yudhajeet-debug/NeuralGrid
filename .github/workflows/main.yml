@@ -22,7 +22,6 @@ jobs:
       - name: Verify Dependencies
         run: go mod tidy
       - name: Compile Binary
-        # Updated to match standard Go project layout (builds all in cmd)
         run: go build -v ./cmd/...
 
   # Sector 2: Python AI & Scripts
@@ -50,7 +49,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v3
         with:
-          version: 9 # Current stable version for Node 24
+          version: 9 
           
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -59,14 +58,13 @@ jobs:
           cache: 'pnpm'
           cache-dependency-path: 'ui/pnpm-lock.yaml'
 
-      - name: Directory & Build Validation
+      - name: Install and Build
         working-directory: ./ui
         run: |
-          if [ -f "package.json" ]; then
-            echo "pnpm Environment Detected."
-            # Uncomment the next line once you have a real pnpm-lock.yaml
-            # pnpm install --frozen-lockfile
+          if [ -f "pnpm-lock.yaml" ]; then
+            pnpm install --frozen-lockfile
+            pnpm run build
           else
-            echo "Error: package.json missing in ui/ directory."
-            exit 1
+            pnpm install
+            pnpm run build
           fi
